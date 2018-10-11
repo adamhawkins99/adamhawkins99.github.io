@@ -1,0 +1,141 @@
+/* CIT 230 - Weather Page */
+
+html {
+    background-color: #393939;
+    font-family: 'Oswald', sans-serif;
+  }
+  
+  header {
+    background-color: #393939;
+    text-align: center;
+    padding: 0.4rem;
+    color: #FF5A09;
+  }
+  
+  header > img {
+    width: 140px;
+    height: auto;
+    vertical-align: middle;
+  }
+  
+  .ht {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  .ht h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
+  }
+  
+  .sh {
+    font-size: 1.1rem;
+    color: b#FF5A09;
+    font-family: 'Oswald', sans-serif;
+  }
+  
+  .cc {
+    display: inline-block;
+    margin: 1rem 0 1rem 5rem;
+    padding: 1.2rem;
+    vertical-align: middle;
+    color: #FF5A09 ;
+    background-color: #393939;
+    font-size: 1.1rem;
+  }
+  
+  .cc img {
+    width: 100px;
+    height: auto;
+  }
+  
+  nav {
+    margin-top: -20px;
+    text-align: center;
+  }
+  
+  .container > li {
+    display: inline-block;
+    padding: 0 20px 12px;
+    font-size: 1.1rem;
+  }
+  
+  nav ul li a:link {
+    text-decoration: none;
+    color: black;
+  }
+  
+  ul {
+    background-color: #FF5A09;
+    list-style: none;
+  }
+  
+  .m1 {
+    background-color: #393939;
+    background-image: url("https://via.placeholder.com/650x150");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    max-width: 670px;
+    margin: 20px auto;
+  }
+  
+  .s1 img {
+    max-width: 150px;
+    flex: 1;
+  }
+  
+  .m2 {
+    background-color: #393939;
+    display: flex;
+    flex-direction: row;
+    max-width: 670px;
+    margin: 20px auto;
+  }
+  
+  .s2 {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  .m3 {
+    background-color: #393939;
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 670px;
+    margin: 20px auto;
+  }
+  
+  .s4 {
+    padding: 10px;
+  }
+  
+  .s3 img {
+    max-width: 150px;
+    flex: 1;
+  }
+  
+  .m4 {
+    background-color: #393939;
+    display: flex;
+    flex-direction: row;
+    max-width: 670px;
+    margin: 20px auto;
+  }
+  
+  .s5 {
+    padding: 10px;
+  }
+  
+  .s6 {
+    padding: 10px;
+  }
+  
+  footer {
+    background-color: #393939;
+    display: flex;
+    justify-content: center;
+    max-width: 670px;
+    margin: -20px auto 20px;
+  }
