@@ -1,0 +1,211 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: #393939;
+	font-family: 'Oswald', sans-serif;
+
+}
+
+.wrapperhead {
+	background-color: #393939;
+	display: flex;
+	justify-content: center;
+	color: #FF5A09;
+    text-shadow: 3px 2px rgb(14, 5, 1)
+}
+
+.img1,
+.img2 {
+	max-width: 60px;
+	height: 60px;
+
+}
+
+.img1 {}
+
+.ht h1 {
+	display: flex;
+	justify-content: center;
+	font-family: 'Oswald', sans-serif;
+	font-size: 30px;
+	margin-top: 20px;
+}
+
+.sh h2 {
+	font-size: 1.3rem;
+    color: #fa7a02);
+    font-family: 'Oswald', sans-serif;
+}
+
+.cc {
+	display: inline-block;
+    margin: 1rem 0 1rem 5rem;
+    padding: 1.0rem;
+    vertical-align: middle;
+    color: #FF5A09 ;
+    background-color: rgb(41, 39, 39);
+    border: 5px outset rgb(72, 72, 73); 
+    font-size: 1.2rem;
+}
+
+.cc p {
+	text-align: center;
+}
+
+nav {
+	background-color: #393939;
+}
+
+.navbar {
+	font-size: 18px;
+}
+
+.hamburger {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #393939;
+	border-color: #393939;
+}
+
+.hamburger img {
+	max-width: 6%;
+	background-color: p#393939;
+}
+
+.main-nav {
+	list-style-type: none;
+	display: flex;
+}
+
+.nav-links,
+.logo {
+	text-decoration: none;
+	color: #FF5A09;
+}
+
+.main-nav {
+	display: none;
+}
+
+.main-nav li {
+	text-align: center;
+	margin: 15px auto;
+}
+
+.townname {
+	text-align: center;
+	font-family: 'Oswald', sans-serif;;
+	background-color: #393939;
+	font-size: 20px;
+	margin-top: -10px;
+    padding: 10px;
+}
+
+.townname h1 {}
+
+.m1 {
+	background-image: url(https://rkarchs.github.io/assignments/lesson-5/images/Preston_Map.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.bgc {
+	background-color: #6b7a;
+	max-width: 190px;
+	margin-left: 7px;
+}
+
+.wd {
+	margin: 15px;
+	height: 150px;
+	max-width: 160px;
+}
+
+.label {
+	line-height: 25px;
+}
+
+.m2 {
+	display: none;
+}
+
+.m2 section {
+	background-color: #393939;
+}
+
+.forecast h3 {
+	text-align: center;
+	font-family: "Libre Baskerville", serif;
+	font-size: 20px;
+}
+
+table {
+	margin: 0 auto;
+	line-height: 20px;
+	border-spacing: 10px;
+}
+
+.m3 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	flex-direction: column-reverse;
+	margin-top: 10px;
+	background-color: #393939;
+}
+
+.m3 article {
+	max-width: 550px;
+}
+
+.m3 article p {
+	line-height: 25px;
+	margin: 20px;
+}
+
+.artimg img {
+	max-width: 250px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+}
+
+.m4 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	flex-direction: row-reverse;
+	margin-top: 15px;
+	background-color: #393939;
+}
+
+.m4 section {
+	max-width: 550px;
+}
+
+.m4 section p {
+	line-height: 25px;
+	margin: 20px;
+}
+
+.map img {
+	max-width: 250px;
+	margin-top: 20px;
+}
+
+footer {
+	text-align: center;
+	margin-top: -10px;
+	margin-bottom: 20px;
+	background-color: p#393939;
+}
+
+footer p {
+	padding: 10px
+}
