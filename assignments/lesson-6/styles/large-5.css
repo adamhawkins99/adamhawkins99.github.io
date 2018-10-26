@@ -1,0 +1,119 @@
+@media only screen and (min-width: 600px) {
+    
+    header button.hamburger { display:none; }
+
+    body {
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+    .img1,
+    .img2 {
+        max-width: 80px;
+        height: 80px;
+    }
+
+    .ht h1 {
+        font-size: 50px;
+        margin-top: 20px;
+        margin-bottom: 25px;
+    }
+
+    .sh h2 {
+        font-size: 20px;
+		margin-top: -20px
+    }
+
+    .cc {
+        display: contents;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .cc p {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .navbar {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .main-nav {
+        display: contents;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .main-nav li {
+        text-align: center;
+        margin: 15px auto;
+    }
+
+    .townname {
+        font-size: 25px;
+    }
+
+    .m1 {
+        max-width: 1000px;
+    }
+
+    .bgc {}
+
+    .wd {
+        height: 200px;
+    }
+
+    .label {
+        line-height: 35px;
+    }
+
+    .m2 {
+        display: contents;
+    }
+
+    .m3 {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        max-width: 1000px;
+        margin: 15px auto;
+    }
+
+    .m3 article {}
+
+    .m3 article p {
+        line-height: 25px;
+        margin: 10px;
+    }
+
+    .artimg img {
+        max-width: 250px;
+        margin: 10px;
+    }
+
+    .m4 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: row;
+        margin: 10px auto;
+    }
+
+
+    .m4 section p {
+        line-height: 25px;
+        margin: 10px;
+    }
+
+    .map img {
+        max-width: 250px;
+        margin-top: 10px;
+    }
+
+}

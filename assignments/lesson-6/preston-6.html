@@ -12,33 +12,22 @@
 </head>
 
 <body>
-	<header class="wrapperhead">
-		<img src="images/leftlogo.png" alt="logo" class="img1">
-		<div class="ht">
-			<h1>The Daily Chill</h1>
-			<div class="sh">
-				<h2>Up to Date, Accurate Weather Information</h2>
-			</div>
-		</div>
-		<div class="cc" style="
-            width: 30%;
-            text-align: center;
-        ">
-           
-		</div>
-	</header>
-
-	<nav class="navbar">
-		<button class="hamburger" onclick="toggleHam()"><img src="images/Hamburger_icon.png" alt="hamburger icon"></button>
-		<ul class="main-nav">
-			<li><a href="#" class="nav-links">Home</a></li>
-			<li><a href="#" class="nav-links">Preston</a></li>
-			<li><a href="#" class="nav-links">Soda Springs</a></li>
-			<li><a href="#" class="nav-links">Fish Haven</a></li>
-			<li><a href="#" class="nav-links">Storm Center</a></li>
-			<li><a href="#" class="nav-links">Gallery</a></li>
-		</ul>
-	</nav>
+		<header>
+				<img src="NewDCLogo.jpg" alt="NewDCLogo" width="50">
+				<h1>The Daily Chill</h1>
+				<!--<div class="hamburger" onclick="toggleHam()"></div>-->
+				<button class="hamburger" onclick="toggleHam()">&#9776;</button>
+			</header>
+			<nav>
+				<ul class="navigation">
+					<li><a href="#" title="Home">Home</a></li>
+					<li><a href="#" title="Preston">Prestont</a></li>
+					<li><a href="#" title="Soda Springs">Soda Springs</a></li>
+					<li><a href="#" title="Fish Haven">Fish Haven</a></li>
+					<li><a href="#" title="Storm Center">Storm Center</a></li>
+					<li><a href="#" title="Gallery">Gallery</a></li>
+				</ul>
+			</nav>
 
 	<main>
 
@@ -114,10 +103,16 @@
 		</div>
 
 	</main>
-	<footer>
-		<p>Footer Content Goes Here</p>
-	</footer>
-	<script src=""></script>
+	<aside>
+			The Daily Chill
+			  123 Main St.
+			 Preston Idaho
+			  (999)999-9999
+		  </aside>
+			<p class="footer-bar">&copy;2018 All Rights Reserved | The Daily Chill |<span id="currentdate"></span></p>
+		</footer>
+	<script src="hamburger.js"></script>
+  <script src="currentdate.js"></script>
 </body>
 
 </html>
