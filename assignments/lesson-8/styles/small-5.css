@@ -1,0 +1,285 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+.container {
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+}
+body {
+	background-color: #393939;
+	font-family: 'Oswald', sans-serif;
+
+}
+* {margin:0}
+header, nav, main, footer {
+    max-width: 1500px;
+    min-width: 100px;
+    margin: 0 auto;
+}
+
+header {
+    background-color:#393939;
+    text-align: center;
+}
+header h1 { 
+    color: #FF5A09;
+    line-height: 6px;
+	font-size:2.6rem;
+	text-shadow: 3px 2px rgb(14, 5, 1)
+}
+
+header img {
+    width: 20%;
+}
+header .subheading {
+    text-align: center;
+    padding: 5px;
+    color: #FF5A09;
+	padding:15px;
+	text-shadow: 3px 2px rgb(14, 5, 1)
+}
+
+
+
+.navigation { list-style: none; padding-left: 0; }
+.navigation li { display: none; }
+
+
+@media only screen and (max-width: 40.5em) {
+	.responsive { position: relative; }
+	.responsive li { background-color: #FF5A09;	display: block;	width: 100%; margin: 3px 0;	border: 1px solid #FF5A09; }
+	.responsive li a {	padding: 1rem; text-align: center;	display: block; text-decoration:none; }
+	.responsive li a:hover { background-color: #FF5A09; }
+}
+
+
+@media only screen and (min-width: 40.5em) {
+	header,	nav {	margin: 0 auto;	max-width: 600px;	}
+	h1 { text-align: center; }
+	.hamburger { display: none;	}
+	.navigation {	background-color: #333;	overflow: hidden;	text-align: center;	}
+	.navigation li { display: inline-block; margin-left: .27rem; }
+	.navigation a {	display: block;	color: #FF5A09;	padding: 0.65rem;	text-align: center;	text-decoration: none;}
+	.navigation a:hover {	color: #000; background-color: #777;	}
+}
+
+
+
+.img1,
+.img2 {
+	max-width: 60px;
+	height: 60px;
+
+}
+
+
+
+.ht h1 {
+	display: flex;
+	justify-content: center;
+	font-family: 'Oswald', sans-serif;
+	font-size: 30px;
+	margin-top: 20px;
+}
+
+.sh h2 {
+	font-size: 1.3rem;
+    color: #fa7a02;
+    font-family: 'Oswald', sans-serif;
+}
+
+.cc {
+	display: inline-block;
+    margin: 1rem 0 1rem 5rem;
+    padding: 1.0rem;
+    vertical-align: middle;
+    color: #FF5A09 ;
+    background-color: rgb(41, 39, 39);
+    border: 5px outset rgb(72, 72, 73); 
+    font-size: 1.2rem;
+}
+
+.cc p {
+	text-align: center;
+}
+
+nav {
+	background-color: #393939;
+}
+
+.navbar {
+	font-size: 18px;
+}
+
+.hamburger {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #393939;
+	border-color: #393939;
+}
+
+.hamburger img {
+	max-width: 6%;
+	background-color: p#393939;
+}
+
+.main-nav {
+	list-style-type: none;
+	display: flex;
+}
+
+.nav-links,
+.logo {
+	text-decoration: none;
+	color: #FF5A09;
+}
+
+.main-nav {
+	display: none;
+}
+
+.main-nav li {
+	text-align: center;
+	margin: 15px auto;
+}
+
+.townname {
+	text-align: center;
+	font-family: 'Oswald', sans-serif;
+	background-color: #868282;
+	font-size: 20px;
+	margin-top: -10px;
+    padding: 10px;
+}
+
+.townname h1 {}
+
+.m1 {
+	background-image: url(https://adamhawkins99.github.io/assignments/lesson-6/images/preston.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.bgc {
+	background-color: #868282;
+	max-width: 200px;
+	margin-left: 10px;
+}
+
+.wd {
+	margin: 20px;
+	height: 160px;
+	max-width: 180px;
+}
+.grid {
+    display:grid;
+    grid-auto-columns: 400px;
+    grid-row-gap: 1em;
+}
+
+.grid div {
+    border: 2px solid #ffffff;
+    border-radius: 3px;
+    background-color: #393939;
+    padding: 0;
+}
+
+img:hover {box-shadow: 5px 5px 10px gray;}
+
+.label {
+	line-height: 20px;
+}
+
+.m2 {
+	display: none;
+}
+
+.m2 section {
+	background-color: #868282;
+}
+
+.forecast h3 {
+	text-align: center;
+	font-family: 'Oswald', sans-serif;
+	font-size: 20px;
+}
+
+table {
+	margin: 0 auto;
+	line-height: 20px;
+	border-spacing: 10px;
+}
+
+.m3 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	flex-direction: column-reverse;
+	margin-top: 10px;
+	background-color: #868282;
+}
+
+.m3 article {
+	max-width: 550px;
+}
+
+.m3 article p {
+	line-height: 25px;
+	margin: 20px;
+}
+
+.artimg img {
+	max-width: 250px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+}
+
+.m4 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	flex-direction: row-reverse;
+	margin-top: 15px;
+	background-color: #868282;
+}
+
+.m4 section {
+	max-width: 550px;
+}
+
+.m4 section p {
+	line-height: 25px;
+	margin: 20px;
+}
+
+.map img {
+	max-width: 250px;
+	margin-top: 20px;
+}
+#button {
+	color:#c1d7ae;
+	
+    
+}
+h2 {
+	font-size: 1.3rem;
+	text-align: center;
+    color: #FF5A09;
+    font-family: 'Oswald', sans-serif;
+}
+footer {
+	text-align: center;
+	margin-top: -10px;
+	margin-bottom: 20px;
+	background-color: p#868282;
+}
+
+footer p {
+	padding: 10px
+}
