@@ -1,0 +1,166 @@
+
+
+* { box-sizing: border-box;}  /* This wildcard applies to all elements ensuring a box layout model */
+
+.container {
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+}
+
+body {
+    font-size: 16px;
+    color: #b97f6e;
+    text-align: center;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+header, nav, main, footer {
+    max-width: 1500px;
+    min-width: 100px;
+    margin: 0 auto;
+}
+
+header {
+    background-color:#123133;
+    text-align: center;
+}
+header h1 { 
+    color: #ffffff;
+    line-height: 6px;
+    font-size:2.6rem;
+}
+
+header img {
+    width: 10%;
+}
+header .subheading {
+    text-align: center;
+    padding: 5px;
+    color: #ffffff;
+    padding:15px;
+}
+
+
+
+ nav button {
+    display:block;
+    position:absolute;
+    top:2.0rem; 
+    right:1.25rem; 
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 1.6rem;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    background-color:#c1d7ae;
+}
+
+nav ul li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #c1d7ae;
+}
+
+nav ul li a {
+    color: #123133;
+    text-decoration: none;
+    text-align: center;
+    padding: .8rem .8rem 2%;
+}
+
+nav ul li.active a {}
+
+nav ul li a:hover {
+    color: #b97f6e;
+    text-align: center;
+}
+
+nav ul.hide { display: none; }
+
+main section {
+    font-size: 1rem;
+}
+main h2, h3, h4 { 
+    color:#b97f6e;
+    font-size:2.3rem;
+}
+
+main figure { margin: 0 0 .2rem 2%; width:96%; }
+main figure img { 
+    width: 100%;
+    margin: 2px;
+}
+
+section { background-color:#ffffff; }
+
+main section img { 
+    width: 100%;
+    padding: 10px;
+}
+
+section.forecast { display: none; }
+
+.town-article {
+    overflow:auto;
+    padding:10px;
+}
+
+article p.town-article img {
+  width: 100%; 
+  margin: 0;
+  padding: 10px;
+}
+
+.footer {
+    display:flex;
+    flex-direction: column; 
+    justify-content: center;
+    background-color:#123133;
+    color:#ffffff;
+    padding:15px; 
+}
+
+.asideFooter {
+    display:flex;
+    background-color: #123133;
+    color: #ffffff;
+    flex-direction: column;
+    justify-content: center;
+    font-size: .9rem;
+    padding: 10px;
+    line-height: 1px;
+    
+}
+
+footer>p {}
+
+/* Gallery CSS Begins Here */ 
+.grid {
+    display:grid;
+    grid-auto-columns: 400px;
+    grid-row-gap: 1em;
+}
+
+.grid div {
+    border: 2px solid #ffffff;
+    border-radius: 3px;
+    background-color: #123133;
+    padding: 0;
+}
+
+img:hover {box-shadow: 5px 5px 10px gray;}
+
+/*Storm Center*/
+#button {
+    color:#c1d7ae;
+    
+}
+
+/* Other Class Selectors */

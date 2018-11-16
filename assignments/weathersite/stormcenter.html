@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Daily Chill</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link rel="stylesheet" href="styles/normalize.css">
+	<link rel="stylesheet" href="styles/small-5.css">
+	<link rel="stylesheet" href="styles/large-5.css">
+</head>
+
+<body>
+		<header>
+				<img src="images/NewDCLogo.jpg" alt="NewDCLogo" width="50">
+				<h1>The Daily Chill</h1>
+				<div class="subheading">Up to Date, Accurate Weather Information</div>
+				<!--<div class="hamburger" onclick="toggleHam()"></div>-->
+				<button class="hamburger" onclick="toggleHam()">&#9776;</button>
+			</header>
+			<nav>
+				<ul class="navigation">
+					<li><a href="home.html" title="Home">Home</a></li>
+					<li><a href="preston.html" title="Preston">Preston</a></li>
+					<li><a href="sodasprings.html" title="Soda Springs">Soda Springs</a></li>
+					<li><a href="fishhaven.html" title="Fish Haven">Fish Haven</a></li>
+					<li><a href="stormcenter.html" title="Storm Center">Storm Center</a></li>
+					<li><a href="gallery.html" title="Gallery">Gallery</a></li>
+				</ul>
+			</nav>
+        <main>
+                <h2>Storm Center Form Sheet</h2>
+                <div class="m3">
+                <form>
+                    First Name
+                    <br>
+                    <input type="text" name="firstname" min="5" required>
+                    <br>
+                    Last Name
+                    <br>
+                    <input type="text" name="lastname" min="5" required>
+                    <br>
+                    Email
+                    <br>
+                    <input type="email" placeholder="email@sample.com">
+                    <br>
+                    Phone Number
+                    <br>
+                    <input type="tel" required>
+                    <br>
+                    Zip Code
+                    <br>
+                    <input type="number" required>
+                    <br>
+                    Storm Date
+                    <br>
+                    <input type="date">
+                    <br>
+                    Storm Type
+                    <br> 
+                    <input list="storms">
+                        <datalist id="storms">
+                            <option value="Flash Flood">
+                            <option value="Hail">
+                            <option value="Hurricane">
+                            <option value="Thunderstorm">
+                            <option value="Tornado">
+                        </datalist><br><br>
+                    Storm Severity
+                    <br>
+                    <label for="severity">Severity (1-10)</label>
+                    <input type="range" id="severity" min="1" max="10">
+                    <br><br>
+                    Storm Region
+                    <br>
+                    <input type="list">
+                        <select id="region">
+                            <option value="Select Region" disabled>Select Region</option>
+                            <option value="Preston">Preston</option>
+                            <option value="Soda Springs">Soda Springs</option>
+                            <option value="Fish Haven">Fish Haven</option>
+                        </select><br><br>
+                    User In-Danger Level
+                    <br>
+                    <input type="radio" value="yes">yes<br>
+                    <input type="radio" value="maybe">no<br>
+                    <input type="radio" value="no">maybe<br><br>
+                    Aditional Info and Comments
+                    <br>
+                    <textarea rows="10" cols="30"></textarea>
+                    <br><br>
+                    <div id="button"><a href="thanks.html">Submit</a></div>
+                    <br><br>
+                </form> 
+                </div>
+        </main>
+        <footer>
+            <p class="footer-bar">&copy;2018 All Rights Reserved | The Daily Chill | 123 Main St. Preston Idaho (999)999-9999<span id="currentdate"></span></p>
+            <script src="currentdate.js"></script>
+    </footer>
+    <script src="hamburger.js"></script>
+    </body>
+</html>
