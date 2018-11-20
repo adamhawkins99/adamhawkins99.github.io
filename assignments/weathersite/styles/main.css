@@ -1,6 +1,6 @@
 
 
-* { box-sizing: border-box;}  /* This wildcard applies to all elements ensuring a box layout model */
+* { box-sizing: border-box;} 
 
 .container {
     display:flex;
@@ -10,7 +10,7 @@
 
 body {
     font-size: 16px;
-    color: #b97f6e;
+    color: #FF5A09;
     text-align: center;
     font-family: 'PT Sans Narrow', sans-serif;
 }
@@ -22,7 +22,7 @@ header, nav, main, footer {
 }
 
 header {
-    background-color:#123133;
+    background-color:#393939;
     text-align: center;
 }
 header h1 { 
@@ -69,7 +69,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #123133;
+    color: #393939;
     text-decoration: none;
     text-align: center;
     padding: .8rem .8rem 2%;
@@ -122,14 +122,14 @@ article p.town-article img {
     display:flex;
     flex-direction: column; 
     justify-content: center;
-    background-color:#123133;
+    background-color:#393939;
     color:#ffffff;
     padding:15px; 
 }
 
 .asideFooter {
     display:flex;
-    background-color: #123133;
+    background-color: #393939;
     color: #ffffff;
     flex-direction: column;
     justify-content: center;
@@ -140,27 +140,3 @@ article p.town-article img {
 }
 
 footer>p {}
-
-/* Gallery CSS Begins Here */ 
-.grid {
-    display:grid;
-    grid-auto-columns: 400px;
-    grid-row-gap: 1em;
-}
-
-.grid div {
-    border: 2px solid #ffffff;
-    border-radius: 3px;
-    background-color: #123133;
-    padding: 0;
-}
-
-img:hover {box-shadow: 5px 5px 10px gray;}
-
-/*Storm Center*/
-#button {
-    color:#c1d7ae;
-    
-}
-
-/* Other Class Selectors */
