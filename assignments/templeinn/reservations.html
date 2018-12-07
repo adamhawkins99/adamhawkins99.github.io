@@ -46,7 +46,73 @@
         </ul>
     </div>
     </nav>
-
+    <main>
+            <div class="info">
+            <h3>Reserve a Room Today!</h3>
+            
+            <form>
+                <label for="fname">First Name</label>
+                <br>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <br>
+                <br>
+                <label for="lname">Last Name</label>
+                <br>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                <br>
+                <br>
+                <label for="email">Email</label>
+                <br>
+                <input type="text" id="email" name="Email" placeholder="example@email.com">
+                <br>
+                <br>
+                <label for="phone">Phone Number</label>
+                <br>
+                <input type="text" id="phone" name="phone" placeholder="(123)456-7890">
+                <br>
+                <br>
+                <label for="checkin">Check in Date</label>
+                <br>
+                <input type="text" id="checkin" name="checkin" placeholder="mm/dd/yyyy">
+                <br>
+                <br>
+                <label for="checkout">Check out Date</label>
+                <br>
+                <input type="text" id="checkout" name="checkout" placeholder="mm/dd/yyyy">
+                <br>
+                <br>
+                <label class="top" required> Select Location*
+                        <select name="location">
+                            <option value="">Select Location...</option>
+                            <option value="LV">Las Vegas, NV</option>
+                            <option value="ST">St. George, Ut</option>
+                            <option value="Los Ang">Los Angeles, Ca</option>
+                            <option value="Rexburg">Cedar City. Ut</option>
+                        </select>
+                    </label>
+                    <br>
+                 <br>
+                 <label class="top" required> Select Room Preference*
+                        <select name="Room">
+                            <option value="">Select Room Preference...</option>
+                            <option value="DQ">Double Queen Beds</option>
+                            <option value="SK">Single King Ben</option>
+                            <option value="US">Upgraded Suite</option>
+                            <option value="PS">Presidential Suite</option>
+                        </select>
+                    </label>
+                    <br>
+                 <br>
+        <label for="subject">Additional Commnets</label>
+                <br>
+        <textarea id="subject" name="subject" placeholder="Please let us know if you have any additional needs" style="height:200px"></textarea>
+                <br>
+                <div id="button"><a href="thanksres.html">Submit</a></div>
+                <br>
+            </form>
+        </div>
+    </main>
+    
     <footer>
         <p class="contact">Temple Inn & Suites<br>
         4810 Montgomery Ln #500 <br>
@@ -60,6 +126,7 @@
         <ul class="footnav">
             <li style="font-weight: bold; font-family:'josefin sans', sans-serif;">RESOURCES</li><br>
             <li><a href="https://www.lds.org/">Temple Photographs</a></li>
+            <li><a href="https://www.booking.com/hotel/us/hampton-inn-temple.html">Hotel Photos</a></li>
             <li><a href="https://www.openweathermap.org/">Weather Information</a></li>
         </ul>
 </footer>
