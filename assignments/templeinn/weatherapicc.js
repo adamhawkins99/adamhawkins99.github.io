@@ -8,10 +8,8 @@ weatherRequestcc.onload = function () {
     console.log(weatherData);
     document.getElementById("placecc").innerHTML = weatherData.name;
     document.getElementById("weatherDesccc").innerHTML = weatherData.weather[0].main;
-    document.getElementById("highTempcc").innerHTML = weatherData.main.temp_max;
-    document.getElementById("lowTempcc").innerHTML = weatherData.main.temp_min;
     document.getElementById("current-tempcc").innerHTML = weatherData.main.temp;
-    document.getElementById("currentWindcc").innerHTML = weatherData.wind.speed;
+
 
     var iconcode = weatherData.weather[0].icon;
 
