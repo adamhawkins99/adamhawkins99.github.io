@@ -9,10 +9,5 @@ weatherRequestcc.onload = function () {
     document.getElementById("placecc").innerHTML = weatherData.name;
     document.getElementById("weatherDesccc").innerHTML = weatherData.weather[0].main;
     document.getElementById("current-tempcc").innerHTML = weatherData.main.temp;
-
-
-    var iconcode = weatherData.weather[0].icon;
-
-    var icon_path = "//openweathermap.org/img/w/" + iconcode + ".png";
   
 }

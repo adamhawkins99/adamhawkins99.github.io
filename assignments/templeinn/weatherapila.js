@@ -10,9 +10,4 @@ weatherRequestla.onload = function () {
     document.getElementById("weatherDescla").innerHTML = weatherData.weather[0].main;
     document.getElementById("current-templa").innerHTML = weatherData.main.temp;
 
-
-    var iconcode = weatherData.weather[0].icon;
-
-    var icon_path = "//openweathermap.org/img/w/" + iconcode + ".png";
-  
 }

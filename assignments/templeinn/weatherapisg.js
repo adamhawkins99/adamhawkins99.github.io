@@ -10,9 +10,4 @@ weatherRequestsg.onload = function () {
     document.getElementById("weatherDescsg").innerHTML = weatherData.weather[0].main;
     document.getElementById("current-tempsg").innerHTML = weatherData.main.temp;
  
-
-    var iconcode = weatherData.weather[0].icon;
-
-    var icon_path = "//openweathermap.org/img/w/" + iconcode + ".png";
-  
 }
