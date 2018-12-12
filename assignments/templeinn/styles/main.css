@@ -201,7 +201,44 @@ main h2, h3, h4 {
     font-family: "Josefin Sans", sans-serif;
     font-weight: bold;
 }
+/*Services Script*/
+table, caption, thead, tbody, tfoot, th, tr, td {
+    text-align: center;
+    font-family: "Josefin Sans", sans-serif;
+    padding: 10px;
+    border-top: 2px solid #686868;
+}
+caption, tfoot {
+    background-color:#FFFAFA;
+    color: rgb(54, 96, 158);
+    font-family: "Josefin Sans", sans-serif;
+}
 
+thead {
+    background-color:#FFFAFA;
+    color: #1C263C;
+    font-size: 1.5rem;
+
+}
+table td {
+    font-size: 1rem;
+    color: #1C263C;
+    border-top: 2px solid #686868;
+    border-bottom: 2px solid #686868;
+}
+tr:nth-child(even) {
+    background-color:#FFFAFA;
+    color: #1C263C;
+}
+tr:nth-child(3) {
+    background-color: #686868;
+}
+tr:nth-child(5) {
+    background-color: #686868;
+}
+tbody tr:nth-child(1) {
+    background-color: #686868; 
+}
 
 
 
