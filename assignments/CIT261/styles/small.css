@@ -1,0 +1,53 @@
+/* Hide nav bar for all sizes smaller than a tablet*/
+@media only screen and (max-width: 650px) {
+    .navigation {
+        display: none;
+    }
+
+.dropdown {
+    padding: 1rem;
+    position: center;
+    
+}
+
+.dropbutton {
+    color: #686868;
+    padding: 16px;
+    min-width: 100px;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    border: 0.5px solid rgb(54, 96, 158);
+    background-color: #FFFAFA;
+    cursor: pointer;
+}
+
+.droplinks {
+    display: none;
+    position: center;
+    background-color: rgb(54, 96, 158);
+    min-width: 100px;
+    padding: 16px;
+
+}
+
+.droplinks a {
+    display: flex;
+    justify-content: center;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #FFFAFA;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+.droplinks a:hover {
+    background-color: #FFFAFA;
+    font-weight: bold;
+}
+
+.show {
+    display: block;
+}
+}
