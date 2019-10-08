@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Java Script</title>
+    <meta name="description" content="Java Script | CIT 261">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet"> 
+</head>
+<body>
+
+
+    <main>
+        <h2>JSON Parse, Stringify</h2>
+        <img class = "homeimg" src="images/json.jpg" alt="Jsonlogo" width="10%"> 
+        
+        <br>
+        <p ul class="sec1">JSON stands for Java Script Object Notation</p>
+        <p ul class="sec1">It is a syntax for storing and exchanging data</p>
+        <p ul class="sec1">JSON is really handy since you can store, exchange and send Data in JavaScript</p>
+        <h2>Parse</h2>
+        <p ul class="sec1">Parsing generally means interpreting.
+
+            JSON is a format specification as mentioned by the rest.
+            
+            Parsing JSON means interpreting the data with whatever language u are using at the moment.
+            
+            JSON are usually read as string first - we usually call that the JSON string (a string that follows the JSON specification).
+            
+            When we parse JSON, it means we are converting the string into a JSON object by following the specification, where we can subsequently use in whatever way we want.:</p>
+            <p ul class="sec1">In the example I used you can gather information from an end user on the classes
+                that they still need to take at BYU-I and the desired grade that they hope to 
+                achieve.  You can then print it out to a separate file or store the data in the array.
+                The outcome of the program would look something like this based on the users input:</p>
+                <p ul class="sec2">package json;<br>
+                    <br>
+                    <br>
+                    import java.io.File;<br>
+                    import java.io.FileNotFoundException;<br>
+                    import java.io.PrintWriter;<br>
+                    import java.util.Scanner;<br>
+                    import org.json.simple.JSONArray;<br>
+                    import org.json.simple.JSONObject;<br>
+                    import org.json.simple.parser.JSONParser;<br>
+                    import org.json.simple.parser.ParseException;<br>
+                    /**<br>
+                     *<br>
+                     * @author adam<br>
+                     */<br>
+                    public class JSON {<br>
+                    public static void main(String[] args) {<br>
+                       Scanner input = new Scanner(System.in);<br>
+                            System.out.print("Please Enter Your Name: ");<br>
+                            String name = input.nextLine();<br>
+                            <br>
+                            // Here you create the JSON object with a name-name value<br>
+                            JSONObject root = new JSONObject();<br>
+                            root.put("name", name);<br>
+                            
+                            // Here you declare array and then add to loop<br>
+                            JSONArray courses = new JSONArray();<br>
+                            <br>
+                            while (true) {<br>
+                                <br>
+                                // Ask user for courses they still need to take at BYU-I<br>
+                                System.out.print("Please Enter the Course/Courses you still need to take at BYU-I:\nIf no other course/s, leave it blank, and hit enter. ");<br>
+                                String course = input.nextLine();<br>
+                                <br>
+                                // Break loop if user leaves course field blank and hits enter<br>
+                                if (course.length() == 0) {<br>
+                                    break;<br>
+                                }<br>
+                                
+                                // Ask user for grade they hope to achieve<br>
+                                System.out.print("Enter Percent Grade You Hope to Achieve (example 83): ");<br>
+                                int grade = input.nextInt();<br>
+                                <br>
+                                if (input.hasNextLine()) {<br>
+                                    input.nextLine();<br>
+                                }<br>
+                                <br>
+                                // Here you create and store JSON object<br>
+                                JSONObject courseObject = new JSONObject();<br>
+                                courseObject.put("grade", grade);<br>
+                                courseObject.put("name", course);<br>
+                                <br>
+                                // Add course to array<br>
+                                courses.add(courseObject);<br>
+                                <br>
+                            }<br>
+                            <br>
+                            // Add the array to root object<br>
+                            root.put("courses", courses);<br>
+                            <br>
+                            System.out.println(root.toJSONString());<br>
+                            <br>
+                            // Trying to create a text file	<br>
+                            File file = new File("StudentInfo.txt");<br>
+                            <br>
+                            try (PrintWriter writer = new PrintWriter(file)){<br>
+                                writer.print(root.toJSONString());<br>
+                            } catch (FileNotFoundException ex) {<br>
+                                System.out.println(ex.toString());<br>
+                            }<br>
+                            <br>
+                            System.out.println("The File was created successfully.\n\nPress enter to finish.");<br>
+                            input.nextLine();<br>
+                            <br>
+                            try {<br>
+                                input = new Scanner(file);<br>
+                                <br>
+                                StringBuilder jsonIn = new StringBuilder();<br>
+                                while (input.hasNextLine()) {<br>
+                                    jsonIn.append(input.nextLine());<br>
+                                }<br>
+                                System.out.println(jsonIn.toString());<br>
+                                <br>
+                                // Parse string<br>
+                                JSONParser parser = new JSONParser();<br>			
+                                JSONObject objRoot = (JSONObject) parser.parse(jsonIn.toString());<br>
+                                <br>
+                                System.out.printf("Students name is %s\n", objRoot.get("name").toString());<br>
+                                <br>
+                                // Add parsed contents back into array<br>
+                                JSONArray coursesIn = (JSONArray) objRoot.get("courses");<br>
+                                <br>
+                                // Loop back through the array to display contents<br>
+                                for (int i = 0; i < coursesIn.size(); i++) {<br>
+                                    JSONObject courseIn = (JSONObject) coursesIn.get(i);<br>
+                                    long gradeIn = (long) courseIn.get("grade");<br>
+                                    String nameIn = (String) courseIn.get("name");<br>
+                                    <br>  
+                                    System.out.printf("Course %s; Percent grade %d\n", nameIn, gradeIn);<br>
+                                }<br>
+                            //Had to create a catch for the file not found exception. <br> 	
+                            } catch (FileNotFoundException | ParseException ex) {<br>
+                                System.out.println(ex.toString());<br>
+                                <br>  
+                            }<br>		
+                            <br>
+                        }<br>
+                    }<br>
+                    <br>
+                    </p>
+                    <h2>Result</h2>
+                <img class = "homeimg" src="images/jsonresult.jpg" alt="JsonResult" width="60%"> 
+                <h2>Video</h2>
+            <ul class="footnav">
+            <li><a href="https://youtu.be/zYdVn_Df9cc">Click Here to see a Video of Program Running</a></li>
+                    </ul>
+        <h2>Stringify</h2>
+        <p ul class="sec1">The JSON.stringify() method converts a JavaScript object or value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.</p>
+        <p ul class="sec1">Syntax: JSON.stringify(value{, replacer[], space]])</p>
+            <img class = "homeimg" src="images/stringify.jpg" alt="Stringify" width="40%"> 
+            <h2>Sources</h2>
+            <ul class="footnav">
+            <li><a href="https://www.quora.com/What-does-parsing-JSON-mean">Quora Source</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">MDM Web Docs</a></li>
+        </ul>
+    </main>
+    <footer>
+        <p class="contact">Adam Hawkins<br>
+        CIT 261 <br>
+        BYU Idaho</p>
+        <ul class="footnav">
+            <li>&copy; Adam Hawkins | </li>
+            <li id="date"></li>
+        </ul>
+        <ul class="footnav">
+            <li style="font-weight: bold; font-family:'josefin sans', sans-serif;">RESOURCES<br></li>
+            <li><a href="https://adamhawkins99.github.io/">Back to Assignments Page</a></li>
+
+        </ul>
+</footer>
+
+    <script type="text/javascript" src="scripts/currentdate.js"></script>
+    <script type="text/javascript" src="scripts/dropdown.js"></script>
+    
+</body>
+</html>
