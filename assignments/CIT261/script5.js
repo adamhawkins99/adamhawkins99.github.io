@@ -14,4 +14,8 @@ function clearDemo (button) {
   button.removeAttribute("disabled");
 }
 
-clickMe.onclick = doDemo; //Onclick call. Pass no arguments.​​​​​
+arguments(); //Onclick call. Pass no arguments.​​​​​
+
+function arguments() {
+    clickMe.onclick = doDemo;
+}

@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html>
+ <head>
+  <title>CSS Manipulation using JavaScript Example</title>
+  <link rel="StyleSheet" href="example.css" type="text/css">
+  <script type="text/javascript">
+    function stilo() {
+      document.getElementById('d').style.color = 'orange';
+    }
+    function resetStyle() {
+      document.getElementById('d').style.color = 'black';
+    }
+  </script>
+ </head>
 
-<head>
-<title>Mozilla CSS Getting Started - JavaScript demonstration</title>
-<link rel="stylesheet" type="text/css" href="style5.css" />
-<script type="text/javascript" src="script5.js"></script>
-</head>
-
-<body>
-<h1>JavaScript/CSS Example</h1>
-
-<div id="square"></div>
-
-<button type="button" id="clickMe">Click Me</button>
-
-</body>
+ <body>
+  <div id="d" class="thunder">CIT261 is Awesome!</div>
+  <button onclick="stilo()">Click here to make it More Awesome!</button>
+  <button onclick="resetStyle()">Reset back to Basic</button>
+ </body>
 </html>
