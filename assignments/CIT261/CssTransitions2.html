@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS Transitions</title>
+    <meta name="description" content="CSS Transitions | CIT 261">
+    <link rel="stylesheet" href="styles/box.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet"> 
+</head>
+<body>
+        <p>The box below combines transitions for: width, height, background-color, transform. Hover over the box to see these properties animated.</p>
+        <div class="box">CIT261 is Awesome</div>
+    </body>
+    <script type="text/javascript">
+    function updateTransition() {
+  var el = document.querySelector("div.box");
+   
+  if (el) {
+    el.className = "box1";
+  } else {
+    el = document.querySelector("div.box1");
+    el.className = "box";
+  }
+   
+  return el;
+}
+
+var intervalID = window.setInterval(updateTransition, 7000);
+
+      </script>
