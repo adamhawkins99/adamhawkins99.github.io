@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DOM Manipulation</title>
+    <meta name="description" content="DOM Manipulation | CIT 261">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet"> 
+</head>
+<body>
+
+
+    <main>
+        <h2>DOM Manipulation</h2>
+        <img class = "homeimg" src="images/domjs.png" alt="DOMlogo" width="10%"> 
+        <h2>What is DOM?</h2>
+        <p ul class="sec1">The Document Object Model (DOM) is the data representation of the objects that comprise the structure and content of a document on the web. In this guide, we'll briefly introduce the DOM. We'll look at how the DOM represents an HTML or XML document in memory and how you use APIs to create web content and applications. <br>
+            <p ul class="sec1">Some examples of DOM manipulation are...<br>
+        Using Create Element<br>
+        Append Child<br>
+        Insert Before<br>
+        Remove Child</p>
+        <h2>Using Create Element</h2>
+        <p ul class="sec1">In an HTML document, the document.createElement() method creates the HTML element specified by tagName, or an HTMLUnknownElement if tagName isn't recognized.</p>
+        <h2>Syntax</h2>
+        <img class = "homeimg" src="images/createElement.jpg" alt="createElement" width="40%"> 
+        <p ul class="sec1">Here is a basic example of how to create an element using JavaScript...</p>
+        <img class = "homeimg" src="images/createElementBasicExample.jpg" alt="createElementBasic" width="40%">    
+                
+                 
+        <h2>Append Child</h2>
+        <p ul class="sec1">he Node.appendChild() method adds a node to the end of the list of children of a specified parent node. If the given child is a reference to an existing node in the document, appendChild() moves it from its current position to the new position (there is no requirement to remove the node from its parent node before appending it to some other node). .</p>
+        <p ul class="sec1">This means that a node can't be in two points of the document simultaneously. So if the node already has a parent, the node is first removed, then appended at the new position. The Node.cloneNode() method can be used to make a copy of the node before appending it under the new parent. Note that the copies made with cloneNode will not be automatically kept in sync.</p>
+        <h2>Syntax</h2>   
+        <img class = "homeimg" src="images/appendChild.jpg" alt="appendChild" width="40%"> 
+        <h2>Append Child Example</h2>
+        <img class = "homeimg" src="images/appendChildExample.jpg" alt="appendChildExample" width="40%">
+        <h2>Insert Before</h2>
+        <p ul class="sec1">The Node.insertBefore() method inserts a node before the reference node as a child of a specified parent node. If the given child is a reference to an existing node in the document, insertBefore() moves it from its current position to the new position (there is no requirement to remove the node from its parent node before appending it to some other node).</p>
+        <p ul class="sec1">This means that a node can't be in two points of the document simultaneously. So if the node already has a parent, the node is first removed, then inserted at the new position. The Node.cloneNode() can be used to make a copy of the node before appending it under the new parent. Note that the copies made with cloneNode() will not be automatically kept in sync.</p>
+        <h2>Syntax</h2>   
+        <img class = "homeimg" src="images/insertBefore.jpg" alt="insertBefore" width="40%"> 
+        <h2>Append Child Example</h2>
+        <img class = "homeimg" src="images/insertBeforeExample.jpg" alt="insertBeforeExample" width="40%">
+        
+
+        <h2>Remove Child</h2>
+        <p ul class="sec1">The Node.removeChild() method removes a child node from the DOM and returns the removed node.</p>
+        <h2>Syntax</h2>   
+        <img class = "homeimg" src="images/removeChild.jpg" alt="removeChild" width="40%"> 
+        <h2>Remove Child Example</h2>
+        <img class = "homeimg" src="images/removeChildExample.jpg" alt="removeChildExample" width="40%">
+  
+    
+    </ul>
+
+            <h2>Sources</h2>
+            <ul class="footnav">
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">MDN Web Docs</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement">MDN Web Docs</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild">MDN Web Docs Append</a></li>
+            <li><a href="https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_node_appendchild">W3 Schools</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/insertBefore">MDN Web Docs Insert Before</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild">MDN Web Docs Remove Child</a></li>
+        </ul>
+    </main>
+    <footer>
+        <p class="contact">Adam Hawkins<br>
+        CIT 261 <br>
+        BYU Idaho</p>
+        <ul class="footnav">
+            <li>&copy; Adam Hawkins | </li>
+            <li id="date"></li>
+        </ul>
+        <ul class="footnav">
+            <li style="font-weight: bold; font-family:'josefin sans', sans-serif;">RESOURCES<br></li>
+            <li><a href="https://adamhawkins99.github.io/">Back to Assignments Page</a></li>
+
+        </ul>
+</footer>
+
+    <script type="text/javascript" src="scripts/currentdate.js"></script>
+    <script type="text/javascript" src="scripts/dropdown.js"></script>
+    
+</body>
+</html>

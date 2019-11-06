@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS Transitions</title>
+    <meta name="description" content="CSS Transitions | CIT 261">
+    <link rel="stylesheet" href="styles/box.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet"> 
+</head>
+<body>
+        <p>The example below combines transitions for: width, height, background-color, transform. <br><br>Hover over the box to see how awesome CIT 261 can be!</p>
+        <div class="box">CIT261 is Awesome</div>
+    </body>
+    <script type="text/javascript">
+  var f = document.getElementById('foo');
+document.addEventListener('click', function(ev){
+    f.style.transform = 'translateY('+(ev.clientY-25)+'px)';
+    f.style.transform += 'translateX('+(ev.clientX-25)+'px)';
+},false);
+
+      </script>

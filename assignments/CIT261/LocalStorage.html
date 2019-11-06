@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Local Storage</title>
+    <meta name="description" content="Local Storage | CIT 261">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet"> 
+</head>
+<body>
+
+
+    <main>
+        <h2>Local Storage</h2>
+        <img class = "homeimg" src="images/API.jpg" alt="APIlogo" width="10%"> 
+        
+        <br>
+        <p ul class="sec1">In many cases of APP development, there comes a need to collect and store information from a user and the call upon that information at a later time.<br>
+        This can be accomplished in different ways.  A few examples I hope to explain on this page are... <br>
+        API<br>
+        ARRAYS<br>
+        ASSOCIATIVE ARRAYS<br>
+        OBJECTS</p>
+        <h2>What is an API?</h2>
+        <p ul class="sec1">An API is a set of functions and procedures allowing the creation of applications that access the features or data of an operating system, application, or other service.</p>
+        <h2>How to you use an API?</h2>
+        <p ul class="sec1">An API specification can take many forms, but often includes specifications for routines, data structures, object classes, variables, or remote calls. POSIX, Windows API and ASPI are examples of different forms of APIs.</p>
+            <p ul class="sec1">JavaScript is one of the more common ways collect data and then call on it later.</p>
+            <p ul class="sec1">You can accomplish this using arrays or Objects</p>
+                
+                 
+        <h2>Arrays</h2>
+        <p ul class="sec1">The Array object lets you store multiple values in a single variable. It stores a fixed-size sequential collection of elements of the same type. An array is used to store a collection of data, but it is often more useful to think of an array as a collection of variables of the same type. </p>
+        <p ul class="sec1">You call an array using something like this...</p>
+            <img class = "homeimg" src="images/Array.jpg" alt="Array" width="40%"> 
+        <h2>Associative Arrays</h2>
+        <p ul class="sec1">Associative arrays are dynamic objects that the user redefines as needed. When you assign values ​​to keys in a variable of type Array, the array is transformed into an object, and it loses the attributes and methods of Array.</p>
+        <p ul class="sec1">An Associatibe Array is also an object</p>
+        <p ul class="sec1">You could create on like this...</p>
+        <img class = "homeimg" src="images/AssocArray.jpg" alt="Associative Array" width="40%"> 
+        <h2>Objects</h2>
+        <p ul class="sec1">Objects are the things you think about first in designing a program and they are also the units of code that are eventually derived from the process. In between, each object is made into a generic class of object and even more generic classes are defined so that objects can share models and reuse the class definitions in their code. Each object is an instance of a particular class or subclass with the class's own methods or procedures and data variables.</p>
+        <p ul class="sec1">Objects are many things and can be used in many ways</p>
+        <p ul class="sec1">A JSON object would look like this...</p>
+        <img class = "homeimg" src="images/jsobjects.jpg" alt="JSON Object" width="40%"> 
+        <p ul class="sec1">It this example, For my JSON project I use both objects and arrays to gather information and store it from a user.</p>
+        <p ul class="sec2">package json;<br>
+            <br>
+            <br>
+            import java.io.File;<br>
+            import java.io.FileNotFoundException;<br>
+            import java.io.PrintWriter;<br>
+            import java.util.Scanner;<br>
+            import org.json.simple.JSONArray;<br>
+            import org.json.simple.JSONObject;<br>
+            import org.json.simple.parser.JSONParser;<br>
+            import org.json.simple.parser.ParseException;<br>
+            /**<br>
+             *<br>
+             * @author adam<br>
+             */<br>
+            public class JSON {<br>
+            public static void main(String[] args) {<br>
+               Scanner input = new Scanner(System.in);<br>
+                    System.out.print("Please Enter Your Name: ");<br>
+                    String name = input.nextLine();<br>
+                    <br>
+                    // Here you create the JSON object with a name-name value<br>
+                    JSONObject root = new JSONObject();<br>
+                    root.put("name", name);<br>
+                    
+                    // Here you declare array and then add to loop<br>
+                    JSONArray courses = new JSONArray();<br>
+                    <br>
+                    while (true) {<br>
+                        <br>
+                        // Ask user for courses they still need to take at BYU-I<br>
+                        System.out.print("Please Enter the Course/Courses you still need to take at BYU-I:\nIf no other course/s, leave it blank, and hit enter. ");<br>
+                        String course = input.nextLine();<br>
+                        <br>
+                        // Break loop if user leaves course field blank and hits enter<br>
+                        if (course.length() == 0) {<br>
+                            break;<br>
+                        }<br>
+                        
+                        // Ask user for grade they hope to achieve<br>
+                        System.out.print("Enter Percent Grade You Hope to Achieve (example 83): ");<br>
+                        int grade = input.nextInt();<br>
+                        <br>
+                        if (input.hasNextLine()) {<br>
+                            input.nextLine();<br>
+                        }<br>
+                        <br>
+                        // Here you create and store JSON object<br>
+                        JSONObject courseObject = new JSONObject();<br>
+                        courseObject.put("grade", grade);<br>
+                        courseObject.put("name", course);<br>
+                        <br>
+                        // Add course to array<br>
+                        courses.add(courseObject);<br>
+                        <br>
+                    }<br>
+                    <br>
+                    // Add the array to root object<br>
+                    root.put("courses", courses);<br>
+                    <br>
+                    System.out.println(root.toJSONString());<br>
+                    <br>
+                    // Trying to create a text file	<br>
+                    File file = new File("StudentInfo.txt");<br>
+                    <br>
+                    try (PrintWriter writer = new PrintWriter(file)){<br>
+                        writer.print(root.toJSONString());<br>
+                    } catch (FileNotFoundException ex) {<br>
+                        System.out.println(ex.toString());<br>
+                    }<br>
+                    <br>
+                    System.out.println("The File was created successfully.\n\nPress enter to finish.");<br>
+                    input.nextLine();<br>
+                    <br>
+                    try {<br>
+                        input = new Scanner(file);<br>
+                        <br>
+                        StringBuilder jsonIn = new StringBuilder();<br>
+                        while (input.hasNextLine()) {<br>
+                            jsonIn.append(input.nextLine());<br>
+                        }<br>
+                        System.out.println(jsonIn.toString());<br>
+                        <br>
+                        // Parse string<br>
+                        JSONParser parser = new JSONParser();<br>			
+                        JSONObject objRoot = (JSONObject) parser.parse(jsonIn.toString());<br>
+                        <br>
+                        System.out.printf("Students name is %s\n", objRoot.get("name").toString());<br>
+                        <br>
+                        // Add parsed contents back into array<br>
+                        JSONArray coursesIn = (JSONArray) objRoot.get("courses");<br>
+                        <br>
+                        // Loop back through the array to display contents<br>
+                        for (int i = 0; i < coursesIn.size(); i++) {<br>
+                            JSONObject courseIn = (JSONObject) coursesIn.get(i);<br>
+                            long gradeIn = (long) courseIn.get("grade");<br>
+                            String nameIn = (String) courseIn.get("name");<br>
+                            <br>  
+                            System.out.printf("Course %s; Percent grade %d\n", nameIn, gradeIn);<br>
+                        }<br>
+                    //Had to create a catch for the file not found exception. <br> 	
+                    } catch (FileNotFoundException | ParseException ex) {<br>
+                        System.out.println(ex.toString());<br>
+                        <br>  
+                    }<br>		
+                    <br>
+                }<br>
+            }<br>
+            <br>
+            </p>
+            <h2>Basic Example</h2>
+                <ul class="footnav">
+        <li><a href="https://adamhawkins99.github.io/assignments/CIT261/LocalStorage2.html">Local Storage Example</a></li>
+    </ul>
+
+            <h2>Sources</h2>
+            <ul class="footnav">
+            <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction">MDN Web Docs</a></li>
+            <li><a href="https://www.tutorialspoint.com/javascript/javascript_arrays_object.htm">Tutorials Point</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Application_programming_interface">Wikipedia</a></li>
+            <li><a href="https://www.xul.fr/javascript/associative.php">XUL</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Application_programming_interface">Wikipedia</a></li>
+        </ul>
+    </main>
+    <footer>
+        <p class="contact">Adam Hawkins<br>
+        CIT 261 <br>
+        BYU Idaho</p>
+        <ul class="footnav">
+            <li>&copy; Adam Hawkins | </li>
+            <li id="date"></li>
+        </ul>
+        <ul class="footnav">
+            <li style="font-weight: bold; font-family:'josefin sans', sans-serif;">RESOURCES<br></li>
+            <li><a href="https://adamhawkins99.github.io/">Back to Assignments Page</a></li>
+
+        </ul>
+</footer>
+
+    <script type="text/javascript" src="scripts/currentdate.js"></script>
+    <script type="text/javascript" src="scripts/dropdown.js"></script>
+    
+</body>
+</html>

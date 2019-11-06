@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<h1>Local Storage Example</h1>
+
+Choose Your Ice Cream<br><br>
+What Ice Cream Would You Like<br>
+<select id="type">
+  <option value="Sandwich">Sandwich</option>
+  <option value="Cone">Cone</option>
+  <option value="Bowl">Bowl</option>
+</select><br><br>
+
+What is yoru favorite flavor?<br>
+<select id="flavor">
+  <option value="Chocolate">Chocolate</option>
+  <option value="Vanilla">Vanilla</option>
+  <option value="Strawberry">Strawberry</option>
+  <option value="CookiesAndCream">Cookies and Cream</option>
+</select><br><br>
+How Many Scoops?<br>
+<input type="number" id="numberofscoops" value="1"> <br><br>
+
+<p id="orderdisplay"></p>
+<button onclick="givemeicecream()">Give Me Some Ice Cream Please</button><br><br>
+<button onclick="showmetheorder()">Reload Your Old Orders</button><br><br>
+<button onclick="throwawayorder()">Throw Away The Ice Cream</button><br><br>
+
+<script>
+function givemeicecream() {
+var type = 
+{ 
+type: document.getElementById("type").value,
+flavor: document.getElementById("flavor").value 
+};
+var flavor = document.getElementById("flavor").value;
+var numberofscoops = document.getElementById("numberofscoops").value;
+var icecreamlink = JSON.stringify(type);
+
+if (numberofscoops < 1) {
+numberofscoops = 1;
+}
+localStorage.setItem("savedorder", numberofscoops + " " + icecreamlink);
+document.getElementById("orderdisplay").innerHTML = '<img src="https://media.istockphoto.com/photos/colorful-scoops-ice-cream-background-concept-picture-id965401258" height="42" width="42"<p>' + numberofscoops + " " + icecreamlink + ' Here you go!</p>';
+};
+
+function showmetheorder() {
+document.getElementById("orderdisplay").innerHTML = '<img src="https://media.istockphoto.com/photos/colorful-scoops-ice-cream-background-concept-picture-id965401258" height="42" width="42"><p>' + localStorage.getItem("savedorder") + " was saved from the past.</p>";
+if (localStorage.getItem("savedorder") === null) {
+document.getElementById("orderdisplay").innerHTML = '<img src="https://pbs.twimg.com/profile_images/811341743371194368/353_ttjx_400x400.jpg" height="42" width="42"><p>' + "No orevious orders.</p>";
+}
+};
+function throwawayorder() {
+localStorage.removeItem("savedorder");
+document.getElementById("orderdisplay").innerHTML = "We hope you enjoyed your order";
+};
+</script>
+</body>
