@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS3 Transitions</title>
+    <meta name="description" content="CSS3 Transitions | CIT 261">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet"> 
+</head>
+<body>
+
+
+    <main>
+        <h2>CSS3 Transitions</h2>
+        <img class = "homeimg" src="images/css3.png" alt="CSS3logo" width="10%"> 
+        <h2>What is CSS3?</h2>
+        <p ul class="sec1">CSS3 is the latest evolution of the Cascading Style Sheets language and aims at extending CSS2.1. It brings a lot of long-awaited novelties, like rounded corners, shadows, gradients, transitions or animations, as well as new layouts like multi-columns, flexible box or grid layouts. <br>
+            <p ul class="sec1">On this page we will be going over Desiging, Defining and Triggering CSS3 Transitions without Custom Libraries.<br>
+           
+        <h2>CSS3 Transitions</h2>
+        <p ul class="sec1">CSS3 transitions Allows the definition of transitions effects between two properties values by adding the CSS transition, transition-delay, transition-duration, transition-property, and transition-timing-function properties.</p>
+        <h2>Difference between Transitions and Animations </h2>
+        <p ul class="sec1">Transitions in CSS are applied to an element and specify that when a property changes it should do so over gradually over over a period of time. Animations are different. When applied, they just run and do their thing. They offer more fine-grained control as you can control different stops of the animations.</p>
+        <h2>So How Does it Work? </h2>
+        <p ul class="sec1">CSS transitions let you decide which properties to animate (by listing them explicitly), when the animation will start (by setting a delay), how long the transition will last (by setting a duration), and how the transition will run (by defining a timing function, e.g. linearly or quick at the beginning, slow at the end).</p>
+        <p ul class="sec1">If you need to pause the transition use getComputedStyle and getPropertyValue at the point in the transition you want to pause it. Then set those CSS properties of that element equal to those values you just got.</p>
+        <h2>Explained </h2>
+        <p ul class="sec1">CSS transitions provide a way to control animation speed when changing CSS properties. Instead of having property changes take effect immediately, you can cause the changes in a property to take place over a period of time. For example, if you change the color of an element from white to black, usually the change is instantaneous. With CSS transitions enabled, changes occur at time intervals that follow an acceleration curve, all of which can be customized.</p>
+        <p ul class="sec1">CSS transitions let you decide which properties to animate (by listing them explicitly), when the animation will start (by setting a delay), how long the transition will last (by setting a duration), and how the transition will run (by defining a timing function, e.g. linearly or quick at the beginning, slow at the end).</p>
+        <h2>Basic Example</h2>
+        <ul class="footnav">
+                <li><a href="https://adamhawkins99.github.io/assignments/CIT261/CSS3Transitions2.html">CSS Transitions Example Using JavaScript</a></li>
+                    </ul>
+                
+
+            <h2>Sources</h2>
+            <ul class="footnav">
+            <li><a href="https://developer.mozilla.org/en-US/docs/Archive/CSS3">MDN web docs</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">Mozilla developer</a></li>
+            <li><a href="https://www.webdesignerdepot.com/2014/05/8-simple-css3-transitions-that-will-wow-your-users/">Web designer depot</a></li>
+            <li><a href="https://catswhocode.com/css-transition//">Cats Who Code</a></li>
+        </ul>
+    </main>
+    <footer>
+        <p class="contact">Adam Hawkins<br>
+        CIT 261 <br>
+        BYU Idaho</p>
+        <ul class="footnav">
+            <li>&copy; Adam Hawkins | </li>
+            <li id="date"></li>
+        </ul>
+        <ul class="footnav">
+            <li style="font-weight: bold; font-family:'josefin sans', sans-serif;">RESOURCES<br></li>
+            <li><a href="https://adamhawkins99.github.io/">Back to Assignments Page</a></li>
+
+        </ul>
+</footer>
+
+    <script type="text/javascript" src="scripts/currentdate.js"></script>
+    <script type="text/javascript" src="scripts/dropdown.js"></script>
+    
+</body>
+</html>
