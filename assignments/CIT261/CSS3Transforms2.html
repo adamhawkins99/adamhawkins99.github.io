@@ -1,0 +1,82 @@
+<!DOCTYPE haml>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS3 Transitions</title>
+    <meta name="description" content="CSS3 Transitions | CIT 261">
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet"> 
+
+    
+    <link href='http://fonts.googleapis.com/css?family=Lato:900' rel='stylesheet' type='text/css'>
+    
+    <style type="text/css">
+        
+        .square {
+  background: rgb(78, 128, 221);
+  border-radius: 5px;
+  height: 100px;
+  margin: 100px;
+  transition: transform 1s;
+  width: 100px;
+
+        }
+    .square:hover{
+            transition: transform 1s;
+            transform: scale(2)
+
+}
+.droplet {
+  background: rgb(102, 130, 205);
+  border-radius: 2% 50%;
+  height: 100px;
+  margin: 100px;
+  transition: all 3s;
+  width: 100px;
+  font-family:Lato;
+        font-weight:900;
+        font-size:.9em;
+        text-align:left;
+        line-height:20px;
+
+}
+  .droplet:hover {
+    transform: rotate(1080deg);
+  }
+  .square1 {
+  background: #00aa9d;
+  border-radius: 3px;
+  height: 100px;
+  margin: 100px;
+  position: absolute;
+  transition: transform 0.8s;
+  width: 100px;
+}
+
+.square2 {
+    background: rgb(102, 130, 205);;
+  border-radius: 3px;
+  height: 150px;
+  margin: 100px;
+  transition: transform 0.8s;
+  position: absolute;
+  width: 150px;
+}
+    .square2:hover {
+      transform: translate(20px, 20px);
+  }
+
+
+
+    </style>
+    
+</head>
+<body>
+    <div class="square">Hover Here </div>
+    <div class="droplet">Hover Here</div>
+    <div class="square1"></div>
+    <div class="square2">Hover Here</div>
+    
+</body>
+</html>
