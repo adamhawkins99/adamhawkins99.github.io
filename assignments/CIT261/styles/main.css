@@ -92,6 +92,29 @@ body {
     .navbar a:active {
         border-bottom: 4px solid rgb(54, 96, 158);
     }
+    .navbar2 {
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+    }
+    
+    .navbar2 a {
+        font-family: "Josefin Sans", sans-serif;
+        font-weight: 100;
+        text-transform: uppercase;
+        color: #686868;
+        text-decoration: none;
+        padding: 1rem;
+    
+    }
+    
+    .navbar2 a:hover {
+        border-bottom: 4px solid rgb(54, 96, 158);
+    }
+    
+    .navbar2 a:active {
+        border-bottom: 4px solid rgb(54, 96, 158);
+    }
     
     @media only screen and (min-width: 992px) {
         .dropdown {
