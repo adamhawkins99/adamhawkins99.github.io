@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Upload Photos</title>
-    <meta name="description" content="Barcode Scanner App">
+    <title>Stored Vehicles</title>
+    <meta name="description" content="Vehicle Inventory APP">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/main.css">
@@ -21,20 +21,68 @@
                     <button onclick="dropdown()" class="dropbutton">Menu</button>
                     <div id="todropdown" class="droplinks">
                         <a href="main.html">Home</a>
-                        <a href="photos.html">Take Photos</a>
-                        <a href="stored.html">Stored Photos</a>
+                        <a href="enter.html">Enter Vehicle</a>
+                        <a href="stored.html">Stored Vehicles</a>
                     </div>
                 </div>
                 <div class="navigation">
                 <ul class="navbar2">
                     <li><a href="main.html">Home</a></li>
-                    <li><a href="photos.html">Take Photos</a></li>
-                    <li><a href="stored.html">Stored Photos</a></li>
+                    <li><a href="enter.html">Enter Vehicle</a></li>
+                    <li><a href="stored.html">Stored Vehicles</a></li>
                 </ul>
             </div>
             </nav>
 
+            <h1>Stored Vehicles</h1>
+            <div class="flex">
+                <section id="vehicleList">
+                    <table>
+                    <thread>
+                        <tr>
+                            <th>Year</th>
+                            <th>Make</th>
+                            <th>Model</th>
+                            <th>Vin</th>
+                            <th>Color</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thread>
+                    <tbody>
+                    </tbody>
+                    </table>
+                </section>
+                <section id="vehicleForm">
+                    <form>
+                        <div>
+                            <label for="year">Enter Year:</label>
+                            <input type="number" id="year" name="year">
+                        </div>
+                        <div>
+                            <label for="make">Enter Make:</label>
+                             <input type="text" id="make" name="make">
+                        </div>
+                        <div>
+                            <label for="model">Enter Model:</label>
+                            <input type="text" id="model" name="model">
+                        </div>
+                        <div>
+                                <label for="vin">Enter Last 6 of Vin:</label>
+                                <input type="text" id="vin" name="vin">
+                        </div>
+                        <div>
+                                <label for="color">Enter Color of Vehicle:</label>
+                                <input type="text" id="color" name="color">
+                        </div>
+                        <div>
+                            <input type="button" value="Save">
+                            <input type="reset" value="Reset">
+                        </div>
+                    </form>
 
+                </section>
+            </div>
 
 
 
@@ -49,13 +97,15 @@
         </ul>
         <ul class="footnav">
             <li style="font-weight: bold; font-family:'josefin sans', sans-serif;">RESOURCES<br></li>
-            <li><a href="main.html">Logout</a></li>
+            <li><a href="login.html">Logout</a></li>
 
         </ul>
 </footer>
 
     <script type="text/javascript" src="scripts/currentdate.js"></script>
     <script type="text/javascript" src="scripts/dropdown.js"></script>
+    <script src="scripts/enterVehicle.js" type="module"></script>
+
     
 </body>
 </html>

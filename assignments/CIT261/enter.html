@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Enter Vehicle</title>
+    <meta name="description" content="Vehicle Inventory APP">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet"> 
+</head>
+<body>
+        
+        <div class="info">
+                <h2>Nevada PicAPart</h2>
+        <img class = "homeimg" src="images/NVPicAPart_Logo.png" alt="Company Logo" width="10%"> 
+        <nav>
+                <div class="dropdown">
+                    <button onclick="dropdown()" class="dropbutton">Menu</button>
+                    <div id="todropdown" class="droplinks">
+                        <a href="main.html">Home</a>
+                        <a href="enter.html">Enter Vehicle</a>
+                        <a href="stored.html">Stored Vehicles</a>
+                    </div>
+                </div>
+                <div class="navigation">
+                <ul class="navbar2">
+                    <li><a href="main.html">Home</a></li>
+                    <li><a href="enter.html">Enter Vehicle</a></li>
+                    <li><a href="stored.html">Stored Vehicles</a></li>
+                </ul>
+            </div>
+            </nav>
+
+            <h1>Enter Vehicle</h1>
+
+            Please Enter the Vehicle You Are Towing<br><br>
+            Enter the Make of the Vehicle<br>
+            <select id="make">
+                    <option value="SelectMake">Select Make</option>
+                    <option value="ACURA">ACURA</option>
+                    <option value="AUDI">AUDI</option>
+                    <option value="BMW">BMW</option>
+                    <option value="BUICK">BUICK</option>
+                    <option value="CADILLAC">CADILLAC</option>
+                    <option value="CHEVROLET">CHEVROLET</option>
+                    <option value="CHRYSLER">CHRYSLER</option>
+                    <option value="DAEWOO">DAEWOO</option>
+                    <option value="DODGE">DODGE</option>
+                    <option value="EAGLE">EAGLE</option>
+                    <option value="FORD">FORD</option>
+                    <option value="GEO">GEO</option>
+                    <option value="GMC">GMC</option>
+                    <option value="HONDA">HONDA</option>
+                    <option value="HYUNDAI">HYUNDAI</option>
+                    <option value="INFINITI">INFINITI</option>
+                    <option value="ISUZU">ISUZU</option>
+                    <option value="JAGUAR">JAGUAR</option>
+                    <option value="JEEP">JEEP</option>
+                    <option value="KIA">KIA</option>
+                    <option value="LAND ROVER">LAND ROVER</option>
+                    <option value="LEXUS">LEXUS</option>
+                    <option value="LINCOLN">LINCOLN</option>
+                    <option value="MAZDA">MAZDA</option>
+                    <option value="MERCEDES-BENZ">MERCEDES-BENZ</option>
+                    <option value="MERCURY">MERCURY</option>
+                    <option value="MINI">MINI</option>
+                    <option value="MITSUBISHI">MITSUBISHI</option>
+                    <option value="NISSAN">NISSAN</option>
+                    <option value="OLDSMOBILE">OLDSMOBILE</option>
+                    <option value="PLYMOUTH">PLYMOUTH</option>
+                    <option value="PONTIAC">PONTIAC</option>
+                    <option value="SAAB">SAAB</option>
+                    <option value="SATURN">SATURN</option>
+                    <option value="SCION">SCION</option>
+                    <option value="SUBARU">SUBARU</option>
+                    <option value="SUZUKI">SUZUKI</option>
+                    <option value="TOYOTA">TOYOTA</option>
+                    <option value="VOLKSWAGEN">VOLKSWAGEN</option>
+                    <option value="VOLVO">VOLVO</option>
+            </select><br><br>
+            
+            Enter the Model of the Vehicle?<br>
+            
+                    <input type="text" id="model" value=""> 
+                    <br><br>
+            Enter Year of Vehicle<br>
+            <input type="number" id="year" value="2000"> <br><br>
+            Enter Vin of Vehicle<br>
+            <input type="test" id="vin" value="Please Enter Full Vin"> <br><br>
+            Enter the Color of the Vehicle<br>
+            <select id="color">
+                    <option value="SelectMake">Select Color</option>
+                </select><br><br>
+            <p id="orderdisplay"></p>
+            <button onclick="entervehicle()">Click to Review Entry</button><br><br>
+            <button onclick="showvehicle()">Reload Your Old Orders</button><br><br>
+            <button onclick="throwawayorder()">Throw Away The Ice Cream</button><br><br>
+
+
+
+</body>
+<footer>
+        <p class="contact">Adam Hawkins<br>
+        CIT 261 <br>
+        BYU Idaho</p>
+        <ul class="footnav">
+            <li>&copy; Adam Hawkins | </li>
+            <li id="date"></li>
+        </ul>
+        <ul class="footnav">
+            <li style="font-weight: bold; font-family:'josefin sans', sans-serif;">RESOURCES<br></li>
+            <li><a href="login.html">Logout</a></li>
+
+        </ul>
+</footer>
+
+    <script type="text/javascript" src="scripts/currentdate.js"></script>
+    <script type="text/javascript" src="scripts/dropdown.js"></script>
+    <script type="text/javascript" src="scripts/"></script>
+    
+</body>
+</html>

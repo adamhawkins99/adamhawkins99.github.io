@@ -171,6 +171,48 @@ footer p {
 .footnav li a:hover {
     border-bottom: 4px solid rgb(54, 96, 158);
 }
+/*Footer Styles APP*/
+footer2 {
+    background-color: #FFFAFA;
+    text-align: center;
+    padding: 15px;
+    color: #e4d9d9;
+    font-family: "raleway", sans-serif;
+}
+
+footer2 p {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.footnav2 {
+    list-style-type: none;
+    margin: 20;
+    padding: 10px;
+    overflow: hidden;
+    color: #f0e9e9;
+    text-align: center;
+    background-color:rgb(41, 79, 110);
+}
+
+.footnav2 li {
+    display: inline;
+}
+
+.footnav2 li a {
+    display: inline-block;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #f5eded;
+    text-decoration: none;
+    padding: 1rem;
+
+}
+
+.footnav2 li a:hover {
+    border-bottom: 4px solid rgb(54, 96, 158);
+}
 /*Home Page Styles*/
 
 main section {
@@ -333,3 +375,36 @@ tbody tr:nth-child(1) {
     color: black;
     padding: 10px;
 }
+/*table app*/
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+.table2 {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    font-family: "Josefin Sans", sans-serif;
+    padding: 10px;
+    border-top: 2px solid #686868;
+
+}
+
+.table2 th, tr, td {
+    padding: 4px;
+    text-align: center;
+    font-size: 1rem;
+    color: rgb(7, 7, 7);
+    border-top: 2px solid #070707;
+    border-bottom: 2px solid #686868;
+
+}
+.hidden {
+    display: none;
+}
+.studentForm {
+    margin-top: 25px;
+
+}
+
+
