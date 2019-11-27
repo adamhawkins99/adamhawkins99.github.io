@@ -390,7 +390,7 @@ tbody tr:nth-child(1) {
 
 }
 
-.table2 th, tr, td {
+.table2 tr, th, td {
     padding: 4px;
     text-align: center;
     font-size: 1rem;
@@ -402,7 +402,7 @@ tbody tr:nth-child(1) {
 .hidden {
     display: none;
 }
-.studentForm {
+#studentForm {
     margin-top: 25px;
 
 }

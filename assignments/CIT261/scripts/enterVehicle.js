@@ -1,14 +1,27 @@
-import { Vehicle } from './vehicle.js';
-
+class Vehicle {
+    constructor(
+        year,
+        make,
+        model,
+        vin,
+        color,
+    ) {
+      this.year = year;
+      this.make = make;
+      this.model = model;
+      this.vin = vin;
+      this.color = color;
+  }
+}
 let vehicles = [];
 
 function saveVehicle() {
     let newVehicle = new Vehicle(
-        document.getElementById("year").nodeValue,
-        document.getElementById("make").nodeValue,
-        document.getElementById("model").nodeValue,
-        document.getElementById("vin").nodeValue,
-        document.getElementById("color").nodeValue,
+        document.getElementById("year").value,
+        document.getElementById("make").value,
+        document.getElementById("model").value,
+        document.getElementById("vin").value,
+        document.getElementById("color").value,
     );
 
     vehicles.push(newVehicle);
@@ -43,7 +56,7 @@ function showVehicles() {
         table.deleteRow(0);
     }
 
-    if(localStorage.getItem("vehicles")){
+    if(localStorage.getItem("vehicles")) {
         vehicles = JSON.parse(localStorage.getItem("vehicles"));
 
     }else {
@@ -52,8 +65,8 @@ function showVehicles() {
 
     vehicles.forEach(vehicle => {
         let tr = document.createElement ('tr');
-        let tdYear = documnet.createElement('td');
-        let tdMake = docment.createElement('td');
+        let tdYear = document.createElement('td');
+        let tdMake = document.createElement('td');
         let tdModel = document.createElement('td');
         let tdVin = document.createElement('td');
         let tdColor = document.createElement('td');

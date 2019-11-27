@@ -33,9 +33,47 @@
                 </ul>
             </div>
             </nav>
+<main>
+        <h1>Enter Vehicle</h1>
 
+        Please Enter the Vehicle You Are Towing<br><br>
+        <section id="vehicleForm">
+                <form>
+                    <div>
+                        <label for="year">Enter Year:</label>
+                        <input type="text" id="year" name="year">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="make">Enter Make:</label>
+                         <input type="text" id="make" name="make">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="model">Enter Model:</label>
+                        <input type="text" id="model" name="model">
+                    </div>
+                    <br>
+                    <div>
+                            <label for="vin">Enter Last 6 of Vin:</label>
+                            <input type="text" id="vin" name="vin">
+                    </div>
+                    <br>
+                    <div>
+                            <label for="color">Enter Color of Vehicle:</label>
+                            <input type="text" id="color" name="color">
+                    </div>
+                    <br>
+                    <div>
+                        <input type="button" value="Save">
+                        <input type="reset" value="Reset">
+                    </div>
+                </form>
+                <br>
+
+            </section>
             <h1>Stored Vehicles</h1>
-            <div class="flex">
+            <div class="table2">
                 <section id="vehicleList">
                     <table>
                     <thread>
@@ -53,36 +91,9 @@
                     </tbody>
                     </table>
                 </section>
-                <section id="vehicleForm">
-                    <form>
-                        <div>
-                            <label for="year">Enter Year:</label>
-                            <input type="number" id="year" name="year">
-                        </div>
-                        <div>
-                            <label for="make">Enter Make:</label>
-                             <input type="text" id="make" name="make">
-                        </div>
-                        <div>
-                            <label for="model">Enter Model:</label>
-                            <input type="text" id="model" name="model">
-                        </div>
-                        <div>
-                                <label for="vin">Enter Last 6 of Vin:</label>
-                                <input type="text" id="vin" name="vin">
-                        </div>
-                        <div>
-                                <label for="color">Enter Color of Vehicle:</label>
-                                <input type="text" id="color" name="color">
-                        </div>
-                        <div>
-                            <input type="button" value="Save">
-                            <input type="reset" value="Reset">
-                        </div>
-                    </form>
-
-                </section>
+               
             </div>
+        </main>
 
 
 
@@ -104,7 +115,7 @@
 
     <script type="text/javascript" src="scripts/currentdate.js"></script>
     <script type="text/javascript" src="scripts/dropdown.js"></script>
-    <script src="scripts/enterVehicle.js" type="module"></script>
+    <script type="text/javascript" src="scripts/enterVehicle.js"></script>
 
     
 </body>
