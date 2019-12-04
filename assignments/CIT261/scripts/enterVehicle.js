@@ -70,7 +70,6 @@ function showVehicles() {
         let tdModel = document.createElement('td');
         let tdVin = document.createElement('td');
         let tdColor = document.createElement('td');
-        let tdEdit = document.createElement('td');
         let tdDelete = document.createElement('td');
 
         tdYear.innerText = vehicle.year;
@@ -78,8 +77,6 @@ function showVehicles() {
         tdModel.innerText = vehicle.model;
         tdVin.innerText = vehicle.vin;
         tdColor.innerText = vehicle.color;
-        tdEdit.innerHTML = '<a href="#">Edit</a>';
-        tdEdit.addEventListener('click', editVehicle);
         tdDelete.innerHTML = '<a href="#">Delete</a>';
         tdDelete.addEventListener('click', deleteVehicle);
 
@@ -88,18 +85,19 @@ function showVehicles() {
         tr.appendChild(tdModel);
         tr.appendChild(tdVin);
         tr.appendChild(tdColor);
-        tr.appendChild(tdEdit);
         tr.appendChild(tdDelete);
 
         document.querySelector ('#vehicleList tbody').appendChild(tr);
     });
 }
-function editVehicle(){
-    alert('Edit');
 
-}
+
 function deleteVehicle(){
-    alert("Delete");
+    alert("WARNING! This will delete all current vehicles in the list.");
+    localStorage.removeItem("vehicles")
+    document.location.reload(true)
+    
+
 }
 document.querySelector('input[type="button"]').addEventListener('click', saveVehicle);
 
